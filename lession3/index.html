@@ -36,59 +36,97 @@
             <!-- table -->
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                 
-                <table class="table table-success table-striped table-hover table-bordered">
-                    <thead>
-                      <tr class="table-danger">
-                        <th scope="col" class="text-center align-middle" rowspan="2">Mã</th>
-                        <th scope="col" class="text-center align-middle" rowspan="2">Họ và tên</th>
-                        <th scope="col" class="text-center align-middle" colspan="3">Điểm</th>
-                        <!-- <th scope="col">Lý </th>
-                        <th scope="col">Hóa</th> -->
-                      </tr>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-danger">
+                        Danh sách điểm sinh viên
+                    </li>
 
-                      <tr class="table-danger">
-                        <!-- <th scope="col">Mã</th> -->
-                        <!-- <th scope="col">Họ và tên</th> -->
-                        <th scope="col" class="text-center">Toán</th>
-                        <th scope="col" class="text-center">Lý </th>
-                        <th scope="col" class="text-center">Hóa</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row" class="table-warning">1</th>
-                        <td>Phí Đức Chính</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                      </tr>
+                    <li class="list-group-item p-0">
 
-                      <tr>
-                        <th scope="row" class="table-warning">2</th>
-                        <td>Phí Đức Chính</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                      </tr>
+                        <table class="table table-hover table-bordered table-striped mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-center align-middle" rowspan="2">STT</th>
+                                    <th scope="col" class="text-center align-middle" rowspan="2">Họ và tên</th>
+                                    <th scope="col" class="text-center align-middle" rowspan="2">Khoa</th>
+                                    <th scope="col" class="text-center align-middle" rowspan="2">Giới tính</th>
+                                    <!-- <th scope="col" class="text-center align-middle">ASM GĐ 1</th> -->
+                                    <th scope="col" class="text-center align-middle" colspan="2">Điểm</th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <!-- <th scope="col">STT</th>
+                                    <th scope="col">Họ và tên</th>
+                                    <th scope="col">Khoa</th>
+                                    <th scope="col">Giới tính</th> -->
+                                    <th scope="col" class="text-center">ASM GĐ 1</th>
+                                    <th scope="col" class="text-center">ASM GĐ 1</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="text-center">1</th>
+                                    <td>Trần Văn A</td>
+                                    <td>Công nghệ thông tin</td>
+                                    <td class="text-center">Nam</td>
+                                    <td class="text-end">1</td>
+                                    <td class="text-end">2</td>
+                                    <td>
+                                        <button class="btn btn-primary">Chi tiết</button>
+                                        <button class="btn btn-warning">Sửa</button>
+                                        <button class="btn btn-danger">Xóa</button>
+                                    </td>
+                                </tr>
 
-                      <tr>
-                        <th scope="row" class="table-warning">3</th>
-                        <td>Phí Đức Chính</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                      </tr>
+                                <tr>
+                                    <th scope="row" class="text-center">2</th>
+                                    <td>Trần Văn A</td>
+                                    <td>Công nghệ thông tin</td>
+                                    <td class="text-center">Nam</td>
+                                    <td class="text-end">1</td>
+                                    <td class="text-end">2</td>
+                                    <td>
+                                        <button class="btn btn-primary">Chi tiết</button>
+                                        <button class="btn btn-warning">Sửa</button>
+                                        <button class="btn btn-danger">Xóa</button>
+                                    </td>
+                                </tr>
 
-                      <tr>
-                        <!-- <th scope="row" class="table-warning">1</th> -->
-                        <td colspan="2" class="text-center text-uppercase">trung bình</td>
-                        <td class="text-center">1</td>
-                        <td class="text-center">2</td>
-                        <td class="text-center">3</td>
-                      </tr>
-                      
-                    </tbody>
-                </table>
+                                <tr>
+                                    <th scope="row" class="text-center">3</th>
+                                    <td>Trần Văn A</td>
+                                    <td>Công nghệ thông tin</td>
+                                    <td class="text-center">Nam</td>
+                                    <td class="text-end">1</td>
+                                    <td class="text-end">2</td>
+                                    <td>
+                                        <button class="btn btn-primary">Chi tiết</button>
+                                        <button class="btn btn-warning">Sửa</button>
+                                        <button class="btn btn-danger">Xóa</button>
+                                    </td>
+                                </tr>
+
+                                <tr class="table-warning">
+                                    <!-- <th scope="row" class="text-center">3</th>
+                                    <td>Trần Văn A</td>
+                                    <td>Công nghệ thông tin</td> -->
+                                    <td class="text-center text-uppercase" colspan="4">Trung bình</td>
+                                    <td class="text-end">1</td>
+                                    <td class="text-end">2</td>
+                                    <td></td>
+                                </tr>
+                              
+                            </tbody>
+                        </table>
+
+                    </li>
+
+                    <li class="list-group-item list-group-item-success">
+                        Tổng sinh viên: 3
+                    </li>
+
+                </ul>
 
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">

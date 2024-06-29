@@ -13,7 +13,7 @@
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
-                    Home
+                    Table
                 </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -34,9 +34,50 @@
         </ul>
 
         <div class="tab-content" id="myTabContent">
+
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                Home
+                
+                <table class="table table-success table-striped table-hover table-bordered">
+                    <thead>
+                        <tr class="table-danger">
+                            <th scope="col" rowspan="2" class="text-center align-middle">Mã</th>
+                            <th scope="col" rowspan="2" class="text-center align-middle">Họ và tên</th>
+                            <th scope="col" colspan="3" class="text-center">Điểm</th>
+                            <!-- <th scope="col">Lý</th>
+                            <th scope="col">Hóa</th> -->
+                        </tr>
+                        <tr class="table-danger">
+                            <!-- <th scope="col">Mã</th> -->
+                            <!-- <th scope="col">Họ và tên</th> -->
+                            <th scope="col" class="text-center">Toán</th>
+                            <th scope="col" class="text-center">Lý</th>
+                            <th scope="col" class="text-center">Hóa</th>
+                        </tr>
+                      
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td class="table-warning">@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td class="table-warning">@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td class="table-warning">@twitter</td>
+                      </tr>
+                    </tbody>
+                </table>
+                
             </div>
+
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                 profile
             </div>

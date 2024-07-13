@@ -9,6 +9,14 @@
 <body ng-app="myApp">
 
     <div ng-controller="myController">
+        <!-- event -->
+        <h1>{{count}}</h1>
+
+        <button class="btn btn-success" ng-click="count = count + 1">Tăng</button>
+        <button class="btn btn-danger" ng-click="count = count - 1">Giảm</button>
+        <button class="btn btn-warning" ng-click="count = 0">Reset</button>
+
+        <hr>
         <!-- binding -->
         <!-- two way binding -->
         <input type="text" ng-model="txtName">

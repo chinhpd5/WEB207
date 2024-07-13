@@ -1,6 +1,7 @@
 const app = angular.module("myApp",[]);
 
 function myFunction($scope){
+    $scope.count =0;
     $scope.txtName ="abc"
 
     $scope.name = "chinhpd5"

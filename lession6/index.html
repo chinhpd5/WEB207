@@ -20,6 +20,54 @@
             <li>{{myLove[1]}}</li>
             <li>{{myLove[2]}}</li>
         </ul>
+        <!-- đổ dữ liệu từ mảng data ra 1 table -->
+        <hr>
+
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Họ và tên</th>
+                    <th scope="col">Giới tính</th>
+                    <th scope="col">Tuổi</th>
+                    <th scope="col">Điểm</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{ data[0].name }}</td>
+                    <td>{{ data[0].gender }}</td>
+                    <td>{{ data[0].age }}</td>
+                    <td>{{ data[0].mark }}</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">2</th>
+                    <td>{{ data[1].name }}</td>
+                    <td>{{ data[1].gender }}</td>
+                    <td>{{ data[1].age }}</td>
+                    <td>{{ data[1].mark }}</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">3</th>
+                    <td>{{ data[2].name }}</td>
+                    <td>{{ data[2].gender }}</td>
+                    <td>{{ data[2].age }}</td>
+                    <td>{{ data[2].mark }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>{{ data[3].name }}</td>
+                    <td>{{ data[3].gender }}</td>
+                    <td>{{ data[3].age }}</td>
+                    <td>{{ data[3].mark }}</td>
+                </tr>
+            </tbody>
+        </table>
+
 
     </div>
     

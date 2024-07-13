@@ -1,6 +1,10 @@
 const app = angular.module("myApp",[]);
 
 function myFunction($scope){
+    $scope.sayHello = function(){
+        $scope.message = `Hello ${$scope.txtContent}`
+    }
+    
     $scope.count = 0;
     $scope.name = "chinh"
 

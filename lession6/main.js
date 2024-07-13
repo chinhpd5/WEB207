@@ -1,6 +1,7 @@
 const app = angular.module("myApp",[]);
 
 function myFunction($scope){
+    $scope.name = "chinh"
 
     $scope.txtName = "Chinhpd5";
     $scope.age = 20

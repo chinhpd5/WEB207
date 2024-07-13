@@ -9,6 +9,14 @@
 <body ng-app="myApp">
 
     <div ng-controller="myController">
+        <!-- binding -->
+        <!-- two binding -->
+        <input type="text" ng-model="name">
+        <h1>Cách 1: {{name}}</h1>
+        <h1 ng-bind="name">Cách 2: </h1>
+
+
+        <hr>
         <h1>{{txtName}}</h1>
 
         <h2>Tuổi: {{age}}</h2>

@@ -9,8 +9,24 @@
 <body ng-app="myApp">
     
     <!-- ng-init -->
-    <div ng-controller="myController" ng-init="gender=false;age=20;address='Hà Nội'">
-        <!-- ng-show || ng-hide -->
+    <div ng-controller="myController" ng-init="code='FE1';gender=false;age=20;address='Hà Nội'">
+        <!-- ng-repeat -->
+        <ul>
+            <li ng-repeat="(index,item) in listName">{{index}} : {{item}}</li>
+            <!-- <li>{{listName[0]}}</li>
+            <li>{{listName[1]}}</li>
+            <li>{{listName[2]}}</li> -->
+        </ul>
+        
+        <!-- ng-switch -->
+        <h1 ng-switch="code">
+            Chuyên ngành:
+            <span ng-switch-when="BE">Back-end</span>
+            <span ng-switch-when="FE">Front-end</span>
+            <span ng-switch-default>Công nghệ thông tin</span>
+        </h1>
+
+        <!-- ng-show || ng-hide : giá kiểu tra có giá trị là boolean -->
         <h1>
             Giới tính:
             <!-- ng-show : true -> hiển thị ; false -> ẩn -->

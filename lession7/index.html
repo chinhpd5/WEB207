@@ -8,7 +8,32 @@
 </head>
 <body ng-app="myApp">
     <!-- ng-init -->
-    <div ng-controller="myController" ng-init="age=20;address='Hà Nội'">
+    <div ng-controller="myController" ng-init="gender=false;age=20;address='Hà Nội'">
+        <!-- ng-show | ng-hide -->
+        <!-- 
+            giá trị truyền: (boolean)
+        -->
+        <h1>
+            Giới tính:
+            <span ng-show="gender">Nam</span>
+            <span ng-hide="gender">Nữ</span>
+        </h1>  
+        <hr>
+        <!-- ng-if -->
+        <input type="text" ng-model="txtDiem">
+
+        <h1>
+            Học lực:
+            <span ng-if="txtDiem <=10 && txtDiem >9">Giỏi</span>
+            <span ng-if="txtDiem <=9 && txtDiem >7">Khá</span>
+            <span ng-if="txtDiem <=7 && txtDiem >5">Trung bình</span>
+            <span ng-if="txtDiem <=5 && txtDiem >0">Yếu</span>
+            <span ng-if="txtDiem < 0 || txtDiem > 10">Lỗi</span>
+        </h1>
+
+
+
+        <hr>
         <h1>Name: {{name}}</h1>
         <h2>Age: {{age}}</h2>
         <h2>Address: {{address}}</h2>

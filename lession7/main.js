@@ -1,11 +1,12 @@
 const app = angular.module("myApp",[])
 
 function parentFunction($scope){
-
+    $scope.parentMess ="Parent"
 }
 
-function childFunction1($scope){
-    $scope.mess1 ="child 1"
+function childFunction1($scope,$rootScope){
+    $scope.mess1 ="child 1";
+    $rootScope.rootMess = "Root Message"
 }
 
 function childFunction2($scope){

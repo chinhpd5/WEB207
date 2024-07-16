@@ -9,11 +9,21 @@
 <body ng-app="myApp">
     <!-- chỉ có thể truy xuất biến(model) trong controller tương ứng -->
     <!-- Không thể thể truy xuất biến(model) từ controller khác -->
+    <!-- biến(model có tính chất kế thừa)
+        Controller con có thể truy xuất biến(model) từ controller cha 
+        Controller cha không thể truy xuất biến(model) từ controller con
+    -->
     <div ng-controller="parentController" class=" p-3 border border-2 border-danger">
+        <h1>Parent: {{parentMess}}</h1>
+        <h1>c1: {{mess1}}</h1>
+        <h1>Root: {{rootMess}}</h1>
 
         <div ng-controller="childrenController1" class="bg-success">
             <h1>c1: {{mess1}}</h1>
             <h1>c2: {{mess2}}</h1>
+            <h1>Parent: {{parentMess}}</h1>
+            <h1>Root: {{rootMess}}</h1>
+
         </div>
 
         <div ng-controller="childrenController2" class="bg-warning">

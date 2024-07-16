@@ -1,6 +1,31 @@
 const app = angular.module("myApp",[]);
 
 function myFunction($scope){
+
+    $scope.show = function(){
+
+        if($scope.diem >10 || $scope.diem < 0){
+            $scope.message ="Lỗi"
+        }else if($scope.diem < 5){
+            $scope.message ="Yếu"
+        }else if($scope.diem < 7){
+            $scope.message ="Trung bình"
+        }else if($scope.diem < 9){
+            $scope.message ="Khá"
+        }else{
+            $scope.message ="Giỏi"
+        }
+    }
+
+    $scope.caculator = function(){
+        // console.log($scope.a);
+        // console.log($scope.b);
+
+        $scope.tong = Number($scope.a) + Number($scope.b);
+        $scope.tich = Number($scope.a) * Number($scope.b);
+        // console.log($scope.tong);
+    }
+
     $scope.sayHello = function(){
         $scope.message = `Hello ${$scope.txtContent}`
     }

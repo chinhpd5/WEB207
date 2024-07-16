@@ -9,6 +9,28 @@
 <body ng-app="myApp">
 
     <div ng-controller="myController">
+
+
+        <!-- chữa bài tập -->
+
+        <!-- bài 2 -->
+        <input type="text" ng-model="diem">
+        <button class="btn btn-success" ng-click="show()">Show</button>
+        <h1>Kết quả: {{showKq}}</h1>
+        <hr>
+        <!-- bài 1: -->
+        <label for="">a</label>
+        <input type="text" ng-model="a">
+        <label for="">b</label>
+        <input type="text" ng-model="b">
+
+
+
+        <button class="btn btn-primary" ng-click="tinhToan()">Tính</button>
+        <br>
+        <h1>Tổng: {{tong}}</h1>
+        <h1>Tích: {{tich}}</h1>
+
         <!-- function -->
         <input type="text" ng-model="txtContent">
         <button class="btn btn-primary" ng-click="sayHello()">Gửi</button>

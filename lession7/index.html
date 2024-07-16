@@ -8,6 +8,14 @@
 </head>
 <body ng-app="myApp">
 
+    <div ng-controller="myController" ng-init="age=20;address='Hà Nội'">
+        <h1>name : {{name}}</h1>
+        <h2>Tuổi: {{age}}</h2>
+        <h3>Quê quán: {{address}}</h3>
+    </div>
+
+    <hr>
+
     <!-- không thể truy xuất biến (model) từ 1 controller khác -->
     <!-- biến(model) có tính chất kế thừa: controller con có thể truy xuất từ controller cha -->
     <!-- không thể truy xuất model từ con ở trong controller cha -->

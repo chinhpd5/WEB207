@@ -10,6 +10,52 @@
     
     <!-- ng-init -->
     <div ng-controller="myController" ng-init="code='FE1';gender=false;age=20;address='Hà Nội'">
+        <table class="table table-hover table-bordered table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tên sản phẩm</th>
+                <th scope="col">Giá bán</th>
+                <th scope="col">Sale</th>
+                <th scope="col">Hình ảnh</th>
+                <th scope="col">Danh mục</th>
+                <th scope="col">Đánh giá</th>
+                <th scope="col">Mô tả</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="(index,item) in data">
+                    <th scope="row">{{index + 1}}</th>
+                    <td>{{item.nameProduct}}</td>
+                    <td>{{item.price}}</td>
+                    <td>
+                        <span class="badge text-bg-success" ng-show="item.sale">Đang sale</span>
+                        <span class="badge text-bg-danger" ng-hide="item.sale">Không sale</span>
+                    </td>
+                    <td>
+                        <img style="height: 80px;" src="{{item.image}}" alt="">
+                    </td>
+                    <td ng-switch="item.category">
+                        <span ng-switch-when="As">Asus</span>
+                        <span ng-switch-when="HP">HP</span>
+                        <span ng-switch-when="De">Dell</span>
+                        <span ng-switch-when="Ac">Acer</span>
+                        <span ng-switch-when="Le">Lenovo</span>
+                        <span ng-switch-when="Ap">Apple</span>
+                        <span ng-switch-when="Mi">Microsoft</span>
+                        <span ng-switch-default>Laptop</span>
+                    </td>
+                    <td>
+                        <span ng-if="item.rate >=0 && item.rate < 5">Thấp</span>
+                        <span ng-if="item.rate >=5 && item.rate < 7">Trung bình</span>
+                        <span ng-if="item.rate >=7 && item.rate <= 10">Cao</span>
+                    </td>
+                    <td>{{item.description}}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <hr>
         <!-- ng-repeat -->
         <ul>
             <li ng-repeat="(index,item) in listName">{{index}} : {{item}}</li>

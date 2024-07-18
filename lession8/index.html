@@ -12,14 +12,43 @@
         <!-- form -->
 
         <form ng-submit="onSubmit()">
+            <!-- Họ và tên -->
             <div class="mb-3">
               <label for="name" class="form-label">Họ và tên</label>
               <input type="text" ng-model="dataInput.name" class="form-control" id="name">
             </div>
 
+            <!-- Tuổi -->
             <div class="mb-3">
                 <label for="age" class="form-label">Tuổi</label>
-                <input type="text" ng-model="dataInput.age" class="form-control" id="age">
+                <input type="number" ng-model="dataInput.age" class="form-control" id="age">
+            </div>
+
+            <!-- Giới tính -->
+            <!--
+                các input:radio cần có chung name (name="gender") để nhóm thành 1 nhóm 
+                giá trị gửi đi qua ng-model là value
+            -->
+            <div class="mb-3">
+                <label class="form-label">Giới tính</label>
+                <div class="form-check">
+                    <input class="form-check-input" ng-model="dataInput.gender" value="men" type="radio" name="gender" id="men">
+                    <label class="form-check-label" for="men">
+                        Nam
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" ng-model="dataInput.gender" value="women" type="radio" name="gender" id="women">
+                    <label class="form-check-label" for="women">
+                        Nữ
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" ng-model="dataInput.gender" value="other" type="radio" name="gender" id="other">
+                    <label class="form-check-label" for="other">
+                        Khác
+                    </label>
+                </div>
             </div>
            
            

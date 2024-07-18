@@ -1,6 +1,32 @@
 const app = angular.module("myApp",[]);
 
 function myFunction($scope){
+    $scope.listData=[
+        {
+            hobbies: [
+                {
+                    text: "Đá bóng",
+                    name: "football",
+                    value: true
+                },
+                {
+                    text: "Bơi",
+                    name: "swim",
+                    value: false
+                },
+                {
+                    text: "Chạy",
+                    name: "run",
+                    value: true
+                }
+            ],
+            name: "chinhpd5",
+            age: 20,
+            gender: "men",
+            note: "ghi chú"
+        }
+    ]
+
     $scope.dataInput={
         hobbies : [
             {
@@ -36,7 +62,10 @@ function myFunction($scope){
     ]
 
     $scope.onSubmit = function(){
-        console.log($scope.dataInput);
+        // console.log($scope.dataInput);
+        $scope.listData.push(angular.copy($scope.dataInput))
+
+        // console.log($scope.listData);
     }
 }
 

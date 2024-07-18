@@ -11,16 +11,48 @@
     <div ng-controller="myController" class="container">
 
         <form ng-submit="onSubmit()">
+            <!-- Họ và tên -->
             <div class="mb-3">
                 <label for="name" class="form-label">Họ và tên</label>
                 <input type="text" ng-model="dataInput.name" class="form-control" id="name">
             </div>
 
+            <!-- Tuổi -->
             <div class="mb-3">
                 <label for="age" class="form-label">Tuổi</label>
-                <input type="number" ng-model="dataInput.age" class="form-control" id="name">
+                <input type="number" ng-model="dataInput.age" class="form-control" id="age">
             </div>
+
+            <!-- Giới tính -->
+            <!-- 
+                - Các thẻ input: radio cần có giá trị name (name="gender") trùng nhau
+                để nhóm thành 1 nhóm
+                - value là giá trị sẽ được nhận trong ng-model
+            -->
+            <div class="mb-3">
+                <label class="form-label">Giới tính</label>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" ng-model="dataInput.gender" value="men" name="gender" id="men">
+                    <label class="form-check-label" for="men">
+                        Nam
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" ng-model="dataInput.gender" value="women" name="gender" id="women">
+                    <label class="form-check-label" for="women">
+                        Nữ
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" ng-model="dataInput.gender" value="other" name="gender" id="other">
+                    <label class="form-check-label" for="other">
+                        Khác
+                    </label>
+                </div>
             
+            
+            </div>
             
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

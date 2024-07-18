@@ -57,6 +57,41 @@
                     </label>
                 </div>
             </div>
+
+            <!-- Sở thích -->
+
+            <div class="mb-3">
+                <label class="form-label">Sở thích</label>
+                <!-- <div class="form-check">
+                    <input class="form-check-input" type="checkbox" ng-model="dataInput.football"  id="football">
+                    <label class="form-check-label" for="football">
+                        Đá bóng
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" ng-model="dataInput.swim"  id="swim">
+                    <label class="form-check-label" for="swim">
+                        Bơi
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" ng-model="dataInput.run"  id="run">
+                    <label class="form-check-label" for="run">
+                        Chạy
+                    </label>
+                </div> -->
+
+                <div class="form-check" ng-repeat="hobby in dataInput.hobbies">
+                    <input class="form-check-input" type="checkbox" 
+                        ng-model="hobby.value"  id="{{hobby.name}}">
+                    <label class="form-check-label" for="{{hobby.name}}">
+                        {{hobby.text}}
+                    </label>
+                </div>
+
+            </div>
            
            
             <button type="submit" class="btn btn-primary">Submit</button>

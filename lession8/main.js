@@ -17,7 +17,24 @@ function myFunction($scope){
     ]
 
     $scope.dataInput={
-        gender : $scope.listGender[$scope.listGender.length - 1].value
+        gender : $scope.listGender[$scope.listGender.length - 1].value,
+        hobbies: [
+            {
+                name: "football",
+                text: "Đá bóng",
+                value: true
+            },
+            {
+                name: "swim",
+                text: "Bơi",
+                value: true
+            },
+            {
+                name: "run",
+                text: "Chạy",
+                value: false
+            }
+        ]
     }
 
     

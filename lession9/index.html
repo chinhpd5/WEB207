@@ -43,7 +43,23 @@
             <!-- Tuổi -->
             <div class="mb-3">
                 <label for="age" class="form-label">Tuổi</label>
-                <input type="number" ng-model="dataInput.age" class="form-control" id="age">
+                <input type="number" name="age" required min="1" max="100"
+                    ng-model="dataInput.age" class="form-control" id="age">
+            
+                <span ng-show="(frm.age.$error.required && frm.age.$touched) || (frm.age.$error.required && frm.$submitted)"
+                    class="text-danger">
+                    Không để trống tuổi
+                </span>
+
+                <span ng-show="frm.age.$error.min"
+                    class="text-danger">
+                    Cần tối thiểu 1 tuổi
+                </span>
+
+                <span ng-show="frm.age.$error.max"
+                    class="text-danger">
+                    Cần tối đa 100 tuổi
+                </span>
             </div>
 
             <!-- Giới tính -->

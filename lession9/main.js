@@ -83,7 +83,10 @@ function myFunction($scope){
 
     $scope.onSubmit = function(){
         // console.log($scope.dataInput);
-        $scope.listData.push(angular.copy($scope.dataInput))
+        // khi form (tất các input) không có lỗi 
+        if($scope.frm.$valid){
+            $scope.listData.push(angular.copy($scope.dataInput))
+        }
         console.log($scope.listData);
     }
 

@@ -52,6 +52,30 @@
       "subject": "WEB207",
       "name": "honghh",
       "age": 25
+    },
+    {
+      "id": "b4d6",
+      "gender": "other",
+      "hobbies": [
+        {
+          "name": "football",
+          "text": "Đá bóng",
+          "value": false
+        },
+        {
+          "name": "swim",
+          "text": "Bơi",
+          "value": false
+        },
+        {
+          "name": "run",
+          "text": "Chạy",
+          "value": false
+        }
+      ],
+      "subject": "WEB209",
+      "name": "abc123",
+      "age": 19
     }
   ],
   "class": []

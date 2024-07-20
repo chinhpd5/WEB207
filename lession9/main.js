@@ -2,31 +2,7 @@ const app = angular.module("myApp",[]);
 
 function myFunction($scope,$http){
     $scope.regex ='/^\S+@\S+\.\S+$/';
-    $scope.listData=[
-        {
-            gender: "other",
-            hobbies: [
-                {
-                    name: "football",
-                    text: "Đá bóng",
-                    value: true
-                },
-                {
-                    name: "swim",
-                    text: "Bơi",
-                    value: true
-                },
-                {
-                    name: "run",
-                    text: "Chạy",
-                    value: false
-                }
-            ],
-            subject: "WEB207",
-            name: "chinhpd5",
-            age: 20
-        }
-    ]
+    $scope.listData=[]
     
     $scope.listGender= [
         {
@@ -80,8 +56,6 @@ function myFunction($scope,$http){
         subject: $scope.listSubject[0].id
     }
 
-    
-
     $scope.onSubmit = function(){
         // console.log($scope.dataInput);
         // khi form (tất các input) không có lỗi 
@@ -104,7 +78,23 @@ function myFunction($scope,$http){
         console.log($scope.listData);
     }
 
+    // khai báo
+    function getStudent(){
+        // lấy danh sách student
+        $http.get('http://localhost:3000/students')
+            .then(
+                function success(response){
+                    // console.log(response);
+                    $scope.listData = response.data;
+                    console.log($scope.listData);
+                },
+                function error(){
+                    alert("Lấy thông tin thất bại")
+                }
+            )
 
+    }
+    getStudent();
 
 }
 

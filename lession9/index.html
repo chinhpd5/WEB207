@@ -156,7 +156,45 @@
         </form>
 
         <!-- table -->
-
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Họ và tên</th>
+                    <th scope="col">Tuổi</th>
+                    <th scope="col">Giới tính</th>
+                    <th scope="col">Sở thích</th>
+                    <th scope="col">Môn học</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="(index,item) in listData">
+                    <th scope="row">{{ index + 1 }}</th>
+                    <td>{{item.name}}</td>
+                    <td>{{item.age}}</td>
+                    <td>
+                        <span ng-repeat="gender in listGender"
+                            ng-if="gender.value == item.gender"    
+                        >
+                            {{gender.name}}
+                        </span>
+                    </td>
+                    <td>
+                        <span ng-repeat="hobby in item.hobbies"
+                            ng-if="hobby.value">
+                            {{hobby.text}}
+                        </span>
+                    </td>
+                    <td>
+                        <span ng-repeat="subject in listSubject"
+                            ng-if="subject.id == item.subject">
+                            {{subject.name}}
+                        </span>
+                    </td>
+                </tr>
+              
+            </tbody>
+        </table>
 
     </div>
 

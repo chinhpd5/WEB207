@@ -129,6 +129,16 @@
 
             </div>
 
+            <!-- Môn học -->
+            <div class="mb-3">
+                <label class="form-label">Môn học</label>
+                <select class="form-select" ng-model="dataInput.subject" >
+                    <option ng-repeat="subject in listSubject" value="{{subject.id}}">{{subject.name}}</option>
+                    <!-- <option value="2">Two</option>
+                    <option value="3">Three</option> -->
+                </select>
+            </div>
+
             <!-- Ghi chú -->
 
             <div class="mb-3">

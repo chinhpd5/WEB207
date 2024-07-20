@@ -27,25 +27,6 @@ function myFunction($scope){
         }
     ]
 
-    $scope.dataInput={
-        hobbies : [
-            {
-                text: "Đá bóng",
-                name: "football",
-                value: false
-            },
-            {
-                text: "Bơi",
-                name: "swim",
-                value: false
-            },
-            {
-                text: "Chạy",
-                name: "run",
-                value: false
-            }
-        ]
-    };
     $scope.listGender =[
         {
             name: "Nam",
@@ -60,6 +41,44 @@ function myFunction($scope){
             value: "other"
         }
     ]
+
+    $scope.listSubject =[
+        {
+            id: "web207",
+            name: "Frontend Framework"
+        },
+        {
+            id: "web208",
+            name: "Node JS"
+        },
+        {
+            id: "web209",
+            name: "Type script"
+        }
+    ]
+
+    $scope.dataInput={
+        hobbies : [
+            {
+                text: "Đá bóng",
+                name: "football",
+                value: false
+            },
+            {
+                text: "Bơi",
+                name: "swim",
+                value: true
+            },
+            {
+                text: "Chạy",
+                name: "run",
+                value: true
+            }
+        ],
+        gender: $scope.listGender[$scope.listGender.length -1].value,
+        subject: $scope.listSubject[1].id
+    };
+    
 
     $scope.onSubmit = function(){
         // console.log($scope.dataInput);

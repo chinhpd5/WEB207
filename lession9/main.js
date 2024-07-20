@@ -1,6 +1,6 @@
 const app = angular.module("myApp",[]);
 
-function myFunction($scope){
+function myFunction($scope,$http){
     $scope.regex ='/^\S+@\S+\.\S+$/';
     $scope.listData=[
         {
@@ -86,7 +86,20 @@ function myFunction($scope){
         // console.log($scope.dataInput);
         // khi form (tất các input) không có lỗi 
         if($scope.frm.$valid){
-            $scope.listData.push(angular.copy($scope.dataInput))
+            // $scope.listData.push(angular.copy($scope.dataInput))
+            // thêm mới sử dụng phương post
+            $http.post("http://localhost:3000/students",$scope.dataInput)
+                .then(
+                    // nếu thành công
+                    function success(){
+                        alert("Thêm thành công")
+                    },
+                    // nếu thất bại
+                    function error(){
+                        alert("Thêm thất bại")
+                    }
+                )
+
         }
         console.log($scope.listData);
     }

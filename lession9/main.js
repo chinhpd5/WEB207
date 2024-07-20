@@ -1,6 +1,7 @@
 const app = angular.module("myApp",[]);
 
 function myFunction($scope){
+    $scope.regex ='/^\S+@\S+\.\S+$/';
     $scope.listData=[
         {
             gender: "other",

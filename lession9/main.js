@@ -1,7 +1,7 @@
 const app = angular.module("myApp",[]);
 
 function myFunction($scope,$http){
-
+    $scope.listStudents=[];
     $scope.listGender =[
         {
             name: "Nam",
@@ -75,6 +75,26 @@ function myFunction($scope,$http){
         }
 
     }
+
+    // lấy danh sách students
+    // khai báo
+    function getList(){
+        $http.get('http://localhost:3000/students')
+            .then(
+                function success(response){
+                    // console.log(response);
+                    // gán data nhận lại cho $scope.listStudents
+                    $scope.listStudents = response.data
+                    console.log($scope.listStudents);
+                },
+                function error(response){
+                    alert("Lấy danh sách thất bại")
+                }
+            )
+    }
+
+    // gọi
+    getList();
 }
 
 app.controller("myController",myFunction)

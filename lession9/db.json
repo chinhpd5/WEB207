@@ -1,8 +1,58 @@
 {
-    "students":[
+  "students": [
+    {
+      "id": "1",
+      "name": "chinhpd5"
+    },
+    {
+      "id": "e834",
+      "hobbies": [
         {
-            "id":"1",
-            "name": "chinhpd5"
+          "text": "Đá bóng",
+          "name": "football",
+          "value": false
+        },
+        {
+          "text": "Bơi",
+          "name": "swim",
+          "value": true
+        },
+        {
+          "text": "Chạy",
+          "name": "run",
+          "value": true
         }
-    ]
+      ],
+      "gender": "men",
+      "subject": "web207",
+      "name": "chinhpd5",
+      "age": 20,
+      "note": "ghi chú"
+    },
+    {
+      "id": "3e5d",
+      "hobbies": [
+        {
+          "text": "Đá bóng",
+          "name": "football",
+          "value": true
+        },
+        {
+          "text": "Bơi",
+          "name": "swim",
+          "value": false
+        },
+        {
+          "text": "Chạy",
+          "name": "run",
+          "value": true
+        }
+      ],
+      "gender": "women",
+      "subject": "web209",
+      "name": "longhh3",
+      "age": 21,
+      "note": "ghi chú"
+    }
+  ]
 }

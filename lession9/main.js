@@ -1,31 +1,6 @@
 const app = angular.module("myApp",[]);
 
-function myFunction($scope){
-    $scope.listData=[
-        {
-            hobbies: [
-                {
-                    text: "Đá bóng",
-                    name: "football",
-                    value: true
-                },
-                {
-                    text: "Bơi",
-                    name: "swim",
-                    value: false
-                },
-                {
-                    text: "Chạy",
-                    name: "run",
-                    value: true
-                }
-            ],
-            name: "chinhpd5",
-            age: 20,
-            gender: "men",
-            note: "ghi chú"
-        }
-    ]
+function myFunction($scope,$http){
 
     $scope.listGender =[
         {
@@ -83,10 +58,22 @@ function myFunction($scope){
     $scope.onSubmit = function(){
         // console.log($scope.dataInput);
         if($scope.frm.$valid){
-            $scope.listData.push(angular.copy($scope.dataInput))
+            // $scope.listData.push(angular.copy($scope.dataInput))
+            // call api thêm mới
+            // thêm mới : post
+            $http.post('http://localhost:3000/students',$scope.dataInput)
+                .then(
+                    // nếu thành công -> success
+                    function success(response){
+                        alert("Thêm thành công")
+                    },
+                    // thất bại -> error
+                    function error(response){
+                        alert("Thêm thất bại")
+                    }
+                )
         }
 
-        console.log($scope.listData);
     }
 }
 

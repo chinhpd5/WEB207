@@ -1,6 +1,7 @@
 const app = angular.module("myApp",[]);
 
 function myFunction($scope,$http){
+    $scope.type = 'add';
     $scope.listStudents=[];
     $scope.listGender =[
         {
@@ -57,21 +58,40 @@ function myFunction($scope,$http){
 
     $scope.onSubmit = function(){
         // console.log($scope.dataInput);
+        // console.log($scope.type);
+        // return;
         if($scope.frm.$valid){
-            // $scope.listData.push(angular.copy($scope.dataInput))
-            // call api thêm mới
-            // thêm mới : post
-            $http.post('http://localhost:3000/students',$scope.dataInput)
-                .then(
-                    // nếu thành công -> success
-                    function success(response){
-                        alert("Thêm thành công")
-                    },
-                    // thất bại -> error
-                    function error(response){
-                        alert("Thêm thất bại")
-                    }
-                )
+
+            if($scope.type == 'add'){
+                // $scope.listData.push(angular.copy($scope.dataInput))
+                // call api thêm mới
+                // thêm mới : post
+                $http.post('http://localhost:3000/students',$scope.dataInput)
+                    .then(
+                        // nếu thành công -> success
+                        function success(response){
+                            alert("Thêm thành công")
+                        },
+                        // thất bại -> error
+                        function error(response){
+                            alert("Thêm thất bại")
+                        }
+                    )
+            }else if($scope.type == 'edit'){
+
+                // console.log($scope.dataInput);
+                // cập nhật
+                $http.put(`http://localhost:3000/students/${$scope.dataInput.id}`,$scope.dataInput)
+                    .then(
+                        function success(){
+                            alert("Sửa thành công")
+                        },
+                        function error(){
+                            alert("Sửa thất bại")
+                        }
+                    )
+            }
+           
         }
 
     }
@@ -95,6 +115,45 @@ function myFunction($scope,$http){
 
     // gọi
     getList();
+
+
+    // xóa
+
+    $scope.onDelete = function(id){
+        // console.log(id);
+        if(confirm("Bạn có chắc chắn muốn xóa không?")){
+            $http.delete(`http://localhost:3000/students/${id}`)
+                .then(
+                    function success(){
+                        alert("Xóa thành công")
+                    },
+                    function error(){
+                        alert("Xóa thất bại")
+                    }
+                )
+        }
+    }
+
+    // Sửa
+    $scope.onEdit = function(id){
+        // thay đổi trạng thái của form
+        $scope.type ='edit'
+
+        // console.log(id);
+        // lấy thông students theo id
+        $http.get(`http://localhost:3000/students/${id}`)
+            .then(
+                function success(res){
+                    // console.log(res);
+                    $scope.dataInput = res.data;
+                },
+                function error(){
+                    alert("Lấy thông tin thất bại");
+                }
+            )
+
+
+    }
 }
 
 app.controller("myController",myFunction)

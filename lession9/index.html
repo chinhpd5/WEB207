@@ -163,6 +163,7 @@
                 <th scope="col">Sở thích</th>
                 <th scope="col">Môn học</th>
                 <th scope="col">Ghi chú</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -193,6 +194,10 @@
                         </span>
                     </td>
                     <td>{{item.note}}</td>
+                    <td>
+                        <button ng-click="onDelete(item.id)" class="btn btn-danger">Xóa</button>
+                        <button ng-click="onEdit(item.id)" class="btn btn-warning">Sửa</button>
+                    </td>
                 </tr>
              
             </tbody>

@@ -1,10 +1,6 @@
 {
   "students": [
     {
-      "id": "1",
-      "name": "chinhpd5"
-    },
-    {
       "id": "e834",
       "hobbies": [
         {
@@ -23,10 +19,10 @@
           "value": true
         }
       ],
-      "gender": "men",
+      "gender": "women",
       "subject": "web207",
-      "name": "chinhpd5",
-      "age": 20,
+      "name": "chinhpd512",
+      "age": 30,
       "note": "ghi chú"
     },
     {

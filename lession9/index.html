@@ -20,9 +20,9 @@
              -->
             <!-- <div class="mb-3">
                 <label for="name" class="form-label">email</label>
-                <input type="text" name="email" ng-pattern="regex" required class="form-control">
+                <input type="text" ng-model="email" name="email" ng-pattern="/^\S+@\S+\.\S+$/" required class="form-control">
 
-                <span ng-show="frm.email.$invalid" class="text-danger">
+                <span ng-show="frm.email.$error.pattern" class="text-danger">
                     Sai định dạng email
                 </span>
             </div> -->
@@ -165,6 +165,7 @@
                     <th scope="col">Giới tính</th>
                     <th scope="col">Sở thích</th>
                     <th scope="col">Môn học</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -190,6 +191,10 @@
                             ng-if="subject.id == item.subject">
                             {{subject.name}}
                         </span>
+                    </td>
+                    <td>
+                        <button ng-click="onDelete(item.id)" class="btn btn-danger">Xóa</button>
+                        <button ng-click="onEdit(item.id)" class="btn btn-warning">Sửa</button>
                     </td>
                 </tr>
               

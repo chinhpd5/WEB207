@@ -3,13 +3,13 @@
         {
             "id":"1",
             "name":"Sản phẩm 1",
-            "quatity": 20,
+            "quantity": 20,
             "categoryId": "abcd"
         },
         {
             "id":"2",
             "name":"Sản phẩm 2",
-            "quatity": 30,
+            "quantity": 30,
             "categoryId": "efgh"
         }
     ],

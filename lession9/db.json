@@ -1,13 +1,8 @@
 {
   "students": [
     {
-      "id": "1",
-      "name": "Chinpd5",
-      "age": 20
-    },
-    {
       "id": "d710",
-      "gender": "men",
+      "gender": "women",
       "hobbies": [
         {
           "name": "football",
@@ -17,7 +12,7 @@
         {
           "name": "swim",
           "text": "Bơi",
-          "value": false
+          "value": true
         },
         {
           "name": "run",
@@ -25,9 +20,9 @@
           "value": true
         }
       ],
-      "subject": "WEB208",
-      "name": "chinhpd5",
-      "age": 10
+      "subject": "WEB209",
+      "name": "chinhpd512",
+      "age": 30
     },
     {
       "id": "56fe",
@@ -52,30 +47,6 @@
       "subject": "WEB207",
       "name": "honghh",
       "age": 25
-    },
-    {
-      "id": "b4d6",
-      "gender": "other",
-      "hobbies": [
-        {
-          "name": "football",
-          "text": "Đá bóng",
-          "value": false
-        },
-        {
-          "name": "swim",
-          "text": "Bơi",
-          "value": false
-        },
-        {
-          "name": "run",
-          "text": "Chạy",
-          "value": false
-        }
-      ],
-      "subject": "WEB209",
-      "name": "abc123",
-      "age": 19
     }
   ],
   "class": []

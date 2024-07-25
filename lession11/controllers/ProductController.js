@@ -1,0 +1,3 @@
+window.ProductController = function($scope){
+    
+}

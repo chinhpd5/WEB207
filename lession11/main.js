@@ -15,5 +15,9 @@ app.config(function($routeProvider){
             templateUrl: './views/product/list.html',
             controller: ProductController
         })
+        .when('/product/add',{
+            templateUrl: './views/product/add.html',
+            controller: ProductController
+        })
 
 })

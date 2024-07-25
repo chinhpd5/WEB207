@@ -11,5 +11,9 @@ app.config(function($routeProvider){
             templateUrl: './views/about.html',
             controller: AboutController
         })
+        .when('/product',{
+            templateUrl: './views/product/list.html',
+            controller: ProductController
+        })
 
 })

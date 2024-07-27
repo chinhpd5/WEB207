@@ -22,7 +22,7 @@ window.ProductController = function($scope,$http,$location){
         $http.get('http://localhost:3000/categories')
             .then(
                 function success(res){
-                    console.log(res.data);
+                    // console.log(res.data);
                     $scope.listCategory = res.data;
                     // lựa chọn mặc định phần tử đầu tiên trong select option
                     if($scope.listCategory.length > 0){
@@ -40,6 +40,7 @@ window.ProductController = function($scope,$http,$location){
 
     getCategories()
 
+    // thêm mới
     $scope.onAdd = function(){
         if($scope.frm.$valid){
             // console.log($scope.dataInput);
@@ -54,6 +55,22 @@ window.ProductController = function($scope,$http,$location){
                         alert("Thêm thất bại")
                     }
                 )
+        }
+    }
+
+    //Xóa
+    $scope.onDelete = function(id){
+        // console.log(id);
+        if(confirm("Bạn có chắc chắn muốn xóa không?")){
+            $http.delete(`http://localhost:3000/products/${id}`)
+            .then(
+                function success(){
+                    // alert("Xóa thành công")
+                },
+                function error(){
+                    alert("Xóa thất bại")
+                }
+            )
         }
     }
 }

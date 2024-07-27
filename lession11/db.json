@@ -17,12 +17,6 @@
       "categoryId": "abcd",
       "name": "chinhpd5",
       "quantity": 200
-    },
-    {
-      "id": "814e",
-      "categoryId": "efgh",
-      "name": "sản phẩm 3",
-      "quantity": 123
     }
   ],
   "categories": [

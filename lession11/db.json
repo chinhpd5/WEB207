@@ -1,26 +1,38 @@
 {
-    "products":[
-        {
-            "id":"1",
-            "name":"Sản phẩm 1",
-            "quantity": 20,
-            "categoryId": "abcd"
-        },
-        {
-            "id":"2",
-            "name":"Sản phẩm 2",
-            "quantity": 30,
-            "categoryId": "efgh"
-        }
-    ],
-    "categories":[
-        {
-            "id":"abcd",
-            "title": "Laptop"
-        },
-        {
-            "id":"efgh",
-            "title": "Mouse"
-        }
-    ]
+  "products": [
+    {
+      "id": "1",
+      "name": "Sản phẩm 1",
+      "quantity": 20,
+      "categoryId": "abcd"
+    },
+    {
+      "id": "2",
+      "name": "Sản phẩm 2",
+      "quantity": 30,
+      "categoryId": "efgh"
+    },
+    {
+      "id": "f59d",
+      "categoryId": "efgh",
+      "name": "chinhpd5",
+      "quantity": 123
+    },
+    {
+      "id": "2ea2",
+      "categoryId": "abcd",
+      "name": "sản phẩm 3",
+      "quantity": 10
+    }
+  ],
+  "categories": [
+    {
+      "id": "abcd",
+      "title": "Laptop"
+    },
+    {
+      "id": "efgh",
+      "title": "Mouse"
+    }
+  ]
 }

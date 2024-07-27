@@ -75,12 +75,13 @@ window.ProductController = function($scope,$http,$location,$routeParams){
 
 
     // Sửa
+    // lấy id trên url
     if($routeParams.id){
         const id = $routeParams.id
         // console.log(id);
         getProductById(id)
     }
-
+    //  lấy thông tin sản phẩm theo id
     function getProductById(id){
         $http.get(`http://localhost:3000/products/${id}`)
             .then(
@@ -94,6 +95,7 @@ window.ProductController = function($scope,$http,$location,$routeParams){
             )
     }
 
+    // cập nhật sản phẩm vào db.json
     $scope.onUpdate = function(){
         if($scope.frm.$valid){
             // console.log($scope.dataInput);

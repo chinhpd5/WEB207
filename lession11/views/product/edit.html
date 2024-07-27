@@ -1,0 +1,43 @@
+<h1>Cập nhật sản phẩm</h1>
+
+<form name="frm" novalidate ng-submit="onUpdate()">
+    <div class="mb-3">
+        <label for="name" class="form-label">Tên sản phẩm</label>
+        <input type="text" ng-model="dataInput.name" name="name" required
+            class="form-control" id="name" >
+
+        <span ng-show="(frm.name.$error.required && frm.name.$touched) || (frm.name.$error.required && frm.$submitted)"
+            class="text-danger">
+            Không để trống tên sản phẩm
+        </span>
+    </div>
+    
+
+    <div class="mb-3">
+        <label for="quantity" class="form-label">Số lượng</label>
+        <input type="number" ng-model="dataInput.quantity" name="quantity" required
+            class="form-control" id="quantity" min="1">
+
+        <span ng-show="(frm.quantity.$error.required && frm.quantity.$touched) || (frm.quantity.$error.required && frm.$submitted)"
+            class="text-danger">
+            Không để trống số lượng
+        </span>
+        <span ng-show="frm.quantity.$error.min"
+            class="text-danger">
+            Cần tối thiểu 1
+        </span>
+    </div>
+
+    <div class="mb-3">
+        <label  class="form-label">Danh mục sản phẩm</label>
+
+        <select class="form-select" ng-model="dataInput.categoryId">
+            <option ng-repeat="cate in listCategory" value="{{cate.id}}">
+                {{cate.title}}
+            </option>
+        </select>
+    
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

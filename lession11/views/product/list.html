@@ -21,7 +21,10 @@
                     {{cate.title}}
                 </span>
             </td>
-            <td></td>
+            <td>
+                <button class="btn btn-danger" ng-click="onDelete(item.id)">Xóa</button>
+                <a href="#!/product/edit/{{item.id}}" class="btn btn-warning">Sửa</a>
+            </td>
         </tr>
       
     </tbody>

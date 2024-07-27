@@ -1,4 +1,4 @@
-window.ProductController = function($scope,$http,$location){
+window.ProductController = function($scope,$http,$location,$routeParams){
     $scope.listProduct =[];
     $scope.listCategory =[];
     $scope.dataInput={};
@@ -63,14 +63,51 @@ window.ProductController = function($scope,$http,$location){
         // console.log(id);
         if(confirm("Bạn có chắc chắn muốn xóa không?")){
             $http.delete(`http://localhost:3000/products/${id}`)
+                .then(
+                    function success(){
+                        // alert("Xóa thành công")
+                    },
+                    function error(){
+                        alert("Xóa thất bại")
+                    }
+                )
+        }
+    }
+
+    // Sửa
+    // lấy id trên url
+    if($routeParams.id){
+        const id = $routeParams.id
+        // console.log(id);
+        getProductById(id)
+    }
+    // lấy thông tin sản phẩm theo id
+    function getProductById(id){
+        $http.get(`http://localhost:3000/products/${id}`)
             .then(
-                function success(){
-                    // alert("Xóa thành công")
+                function success(res){
+                    console.log(res.data);
+                    // đổ dữ liệu ra form
+                    $scope.dataInput = res.data;
                 },
                 function error(){
-                    alert("Xóa thất bại")
+                    alert("Lấy thông tin thất bại")
                 }
             )
+    }
+    // cập nhật dữ liệu vào db.json
+    $scope.onUpdate = function(){
+        if($scope.frm.$valid){
+            $http.put(`http://localhost:3000/products/${$scope.dataInput.id}`,$scope.dataInput)
+                .then(
+                    function success(){
+                        // chuyển về trang danh sách
+                        $location.url('/product')
+                    },
+                    function error(){
+                        alert("Cập nhật thất bại")
+                    }
+                )
         }
     }
 }

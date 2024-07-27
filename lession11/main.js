@@ -19,5 +19,10 @@ app.config(function($routeProvider){
             templateUrl: './views/product/add.html',
             controller: ProductController
         })
+        .when('/product/edit/:id',{
+            templateUrl: './views/product/edit.html',
+            controller: ProductController
+        })
+        .otherwise('/product')
 
 })

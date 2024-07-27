@@ -2,3 +2,39 @@
 
 <!-- form  -->
 <!-- thêm mới vào db.json -->
+
+<form name="frm" novalidate ng-submit="onAdd()">
+    <div class="mb-3">
+        <label for="name" class="form-label">Tên sản phẩm</label>
+        <input type="text" ng-model="dataInput.name" name="name" required
+            class="form-control" id="name">
+        
+        <span class="text-danger" ng-show="(frm.name.$error.required && frm.name.$touched) || (frm.name.$error.required && frm.$submitted)">
+            Không để trống tên sản phẩm
+        </span>
+    </div>
+
+    <div class="mb-3">
+        <label for="quantity" class="form-label">Số lượng</label>
+        <input type="number" ng-model="dataInput.quantity" name="quantity" required
+            class="form-control" id="quantity">
+        
+        <span class="text-danger" ng-show="(frm.quantity.$error.required && frm.quantity.$touched) || (frm.quantity.$error.required && frm.$submitted)">
+            Không để trống số lượng
+        </span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Danh mục</label>
+
+        <select class="form-select" ng-model="dataInput.categoryId">
+            <option ng-repeat="cate in listCategory" value="{{cate.id}}">
+                {{cate.title}}
+            </option>
+        </select>
+    
+    </div>
+    
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -18,19 +18,19 @@
     "homes":[
       {
         "name": "Hà Nội",
-        "value": "hn"
+        "id": "hn"
       },
       {
         "name": "Hà Nam",
-        "value": "hna"
+        "id": "hna"
       },
       {
         "name": "Thái nguyên",
-        "value": "tn"
+        "id": "tn"
       },
       {
         "name": "Hải phòng",
-        "value": "hp"
+        "id": "hp"
       }
     ]
   }

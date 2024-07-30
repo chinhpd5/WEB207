@@ -1,9 +1,9 @@
 /**
  * Yêu cầu:
- * Thực hiện chức năng Danh sách, Thêm, Sửa, Xóa
+ * Thực hiện chức năng Danh sách, Thêm, Sửa, Xóa cho User
  * Danh sách hiển thị các thông tin 
  * - lưu ý: Quê quán hiển thị theo tên quê quán
- * Thêm mới:
+ * Thêm mới, cập nhật:
  * Validate: 
  *  - Họ và tên: Không để trống
  *  - code: Không để trống, tối thiểu 5 kí tự

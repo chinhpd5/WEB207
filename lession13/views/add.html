@@ -1,0 +1,58 @@
+<h1>Thêm mới user</h1>
+
+<form name="frm" novalidate ng-submit="onAdd()">
+    <div class="mb-3">
+        <label for="name" class="form-label">Họ và tên</label>
+        <input type="text" name="name" ng-model="dataInput.name" required
+            class="form-control" id="name" >
+
+        <span ng-show="(frm.name.$error.required && frm.name.$touched) || (frm.name.$error.required && frm.$submitted)"
+            class="text-danger">
+            Không được để trống họ và tên
+        </span>
+    </div>
+
+    <div class="mb-3">
+        <label for="code" class="form-label">MSV</label>
+        <input type="text" name="code" ng-model="dataInput.code" required ng-minlength="5"
+            class="form-control" id="code" >
+
+        <span ng-show="(frm.code.$error.required && frm.code.$touched) || (frm.code.$error.required && frm.$submitted)"
+            class="text-danger">
+            Không được để trống MSV
+        </span>
+
+        <span ng-show="frm.code.$error.minlength"
+            class="text-danger">
+            Cần tối thiểu 5 kí tự
+        </span>
+    </div>
+
+    <div class="mb-3">
+        <label for="code" class="form-label">Năm sinh</label>
+        <input type="number" name="year" ng-model="dataInput.year" required min="1990"
+            class="form-control" id="year" >
+
+        <span ng-show="(frm.year.$error.required && frm.year.$touched) || (frm.year.$error.required && frm.$submitted)"
+            class="text-danger">
+            Không được để trống Năm sinh
+        </span>
+
+        <span ng-show="frm.year.$error.min"
+            class="text-danger">
+            Cần tối thiểu 1990
+        </span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Quê quán</label>
+        <select class="form-select" ng-model="dataInput.home">
+            <option ng-repeat="home in listHome" value="{{home.value}}">
+                {{home.name}}
+            </option>
+        </select>
+    </div>
+    
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

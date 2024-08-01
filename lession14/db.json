@@ -1,0 +1,34 @@
+{
+    "books":[
+        {
+            "id": "1",
+            "title": "Kỹ năng lập trình",
+            "yearOfPublish": 2001,
+            "publisher":"aaab"
+        },
+        {
+            "id": "2",
+            "title": "Kỹ năng học tập",
+            "yearOfPublish": 2003,
+            "publisher":"aaad"
+        }
+    ],
+    "publisher":[
+        { 
+            "id": "aaab",
+            "name": "NXB Kim Đồng"
+        },
+        { 
+            "id": "aaac",
+            "name": "NXB Giáo dục"
+        },
+        { 
+            "id": "aaad",
+            "name": "NXB Tuổi trẻ"
+        },
+        { 
+            "id": "aaae",
+            "name": "NXB Bách Khoa"
+        }
+    ]
+}

@@ -1,36 +1,43 @@
 {
-    "users": [
-      {
-        "id": "7c4e",
-        "name": "Nguyễn Văn A",
-        "code": "ph12345",
-        "year": 2003,
-        "home": "hp"
-      },
-      {
-        "id": "1ad5",
-        "name": "Trần Thị B",
-        "code": "ph74378",
-        "year": 2004,
-        "home": "hna"
-      }
-    ],
-    "homes":[
-      {
-        "name": "Hà Nội",
-        "value": "hn"
-      },
-      {
-        "name": "Hà Nam",
-        "value": "hna"
-      },
-      {
-        "name": "Thái nguyên",
-        "value": "tn"
-      },
-      {
-        "name": "Hải phòng",
-        "value": "hp"
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": "7c4e",
+      "name": "Nguyễn Văn A",
+      "code": "ph12345",
+      "year": 2003,
+      "home": "hp"
+    },
+    {
+      "id": "1ad5",
+      "name": "Trần Thị B",
+      "code": "ph74378",
+      "year": 2004,
+      "home": "hna"
+    },
+    {
+      "id": "b319",
+      "home": "hn",
+      "name": "chinhpd5 new",
+      "code": "ph134556",
+      "year": 2004
+    }
+  ],
+  "homes": [
+    {
+      "name": "Hà Nội",
+      "value": "hn"
+    },
+    {
+      "name": "Hà Nam",
+      "value": "hna"
+    },
+    {
+      "name": "Thái nguyên",
+      "value": "tn"
+    },
+    {
+      "name": "Hải phòng",
+      "value": "hp"
+    }
+  ]
+}

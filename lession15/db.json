@@ -1,0 +1,26 @@
+{
+    "course":[
+        {
+            "id":"1",
+            "cousreName":"JS cơ bản",
+            "views":2000,
+            "categoryId":"abcd"
+        },
+        {
+            "id":"2",
+            "cousreName":"JS nâng cao",
+            "views":5000,
+            "categoryId":"efgh"
+        }
+    ],
+    "category":[
+        {
+            "id":"abcd",
+            "name":"Cơ bản"
+        },
+        {
+            "id":"efgh",
+            "name":"Nâng cao"
+        }
+    ]
+}
